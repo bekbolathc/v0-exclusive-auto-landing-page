@@ -1,9 +1,12 @@
 import Link from "next/link"
-import { Phone, MessageCircle, MapPin } from "lucide-react"
+import { Phone, MessageCircle, MapPin, Instagram, Map } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567"
-const PHONE_NUMBER = "tel:+77001234567"
-const PHONE_DISPLAY = "+7 700 123 45 67"
+const WHATSAPP_LINK = "https://wa.me/77079829824"
+const PHONE_NUMBER = "tel:+77079829824"
+const PHONE_DISPLAY = "+7 (707) 982-98-24"
+const INSTAGRAM_LINK = "https://www.instagram.com/exclusive.avtochehly/"
+const TWOGIS_LINK = "https://2gis.kz/almaty/firm/70000001039884402?m=76.904473%2C43.216697%2F16"
+const ADDRESS = "г. Алматы, ул. Тимирязева 42 к15/5, БЦ Азия Мост"
 
 export function Footer() {
   return (
@@ -44,9 +47,31 @@ export function Footer() {
                   WhatsApp
                 </a>
               </li>
+              <li>
+                <a
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href={TWOGIS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Map className="w-4 h-4" />
+                  2ГИС
+                </a>
+              </li>
               <li className="flex items-start gap-2 text-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>г. Алматы, Казахстан</span>
+                <span>{ADDRESS}</span>
               </li>
             </ul>
           </div>

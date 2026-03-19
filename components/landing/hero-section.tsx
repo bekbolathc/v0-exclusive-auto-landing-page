@@ -4,8 +4,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Phone, MessageCircle, Check } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
-const PHONE_NUMBER = "tel:+77001234567"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
+const PHONE_NUMBER = "tel:+77079829824"
 
 export function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export function HeroSection() {
               <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
                 <Check className="w-4 h-4 text-primary" />
               </div>
-              <span className="text-foreground">Более 300 установок в Алматы</span>
+              <span className="text-foreground">Более 10 000 установок в Алматы</span>
             </li>
           </ul>
 

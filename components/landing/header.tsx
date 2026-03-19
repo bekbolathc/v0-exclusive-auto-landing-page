@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, X } from "lucide-react"
 
-const PHONE_NUMBER = "tel:+77001234567"
-const PHONE_DISPLAY = "+7 700 123 45 67"
+const PHONE_NUMBER = "tel:+77079829824"
+const PHONE_DISPLAY = "+7 (707) 982-98-24"
 
 const navLinks = [
   { href: "#packages", label: "Пакеты" },

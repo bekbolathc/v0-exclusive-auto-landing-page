@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20узнать%20точную%20цену"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20точную%20цену"
 
 const priceRanges = [
   { material: "Экокожа", price: "от 70 000 ₸", description: "Практичный выбор" },

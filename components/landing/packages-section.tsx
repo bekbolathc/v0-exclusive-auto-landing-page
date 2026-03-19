@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Check, MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20подобрать%20вариант%20под%20мою%20машину"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20подобрать%20вариант%20под%20мою%20машину"
 
 const packages = [
   {

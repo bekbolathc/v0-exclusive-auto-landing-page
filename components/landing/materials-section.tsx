@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Droplets, Sparkles, Layers } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Помогите%20подобрать%20материал"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Помогите%20подобрать%20материал"
 
 const materials = [
   {

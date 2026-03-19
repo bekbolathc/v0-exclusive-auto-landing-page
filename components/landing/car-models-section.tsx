@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20под%20мою%20машину"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20под%20мою%20машину"
 
 const carBrands = [
   { name: "Toyota", models: "Camry, Land Cruiser, RAV4" },
@@ -12,6 +12,12 @@ const carBrands = [
   { name: "Mercedes", models: "C, E, S-Class, GLC" },
   { name: "Kia", models: "K5, K7, Sportage" },
   { name: "Hyundai", models: "Sonata, Tucson, Santa Fe" },
+  { name: "Chery", models: "Tiggo 7 Pro, Tiggo 8 Pro" },
+  { name: "Haval", models: "Jolion, F7, H9, Dargo" },
+  { name: "Geely", models: "Coolray, Atlas Pro, Monjaro" },
+  { name: "Changan", models: "CS55 Plus, CS75 Plus, UNI-K" },
+  { name: "Exeed", models: "TXL, VX, LX" },
+  { name: "Jetour", models: "Dashing, X70 Plus, X90 Plus" },
 ]
 
 export function CarModelsSection() {
@@ -27,7 +33,7 @@ export function CarModelsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
           {carBrands.map((brand) => (
             <div
               key={brand.name}

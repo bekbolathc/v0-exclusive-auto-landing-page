@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
 
 export function StickyWhatsApp() {
   return (
