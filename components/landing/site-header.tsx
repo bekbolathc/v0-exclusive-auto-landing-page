@@ -5,9 +5,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, X } from "lucide-react"
 
-const phoneNumber = "tel:+77079829824"
-const phoneDisplay = "+7 (707) 982-98-24"
-
 const navLinks = [
   { href: "#packages", label: "Пакеты" },
   { href: "#gallery", label: "Работы" },
@@ -16,7 +13,7 @@ const navLinks = [
   { href: "#faq", label: "Вопросы" },
 ]
 
-export function Header() {
+export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -46,13 +43,14 @@ export function Header() {
               className="hidden sm:flex items-center gap-2"
               asChild
             >
-              <a href={phoneNumber}>
+              <a href="tel:+77079829824">
                 <Phone className="w-4 h-4" />
-                <span>{phoneDisplay}</span>
+                <span>+7 (707) 982-98-24</span>
               </a>
             </Button>
 
             <button
+              type="button"
               className="md:hidden p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
@@ -76,11 +74,11 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href={phoneNumber}
+                href="tel:+77079829824"
                 className="flex items-center gap-2 px-4 py-2 text-primary font-medium"
               >
                 <Phone className="w-4 h-4" />
-                {phoneDisplay}
+                +7 (707) 982-98-24
               </a>
             </div>
           </nav>
