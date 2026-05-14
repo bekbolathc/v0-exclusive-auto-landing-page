@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Check, MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20подобрать%20вариант%20под%20мою%20машину"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20подобрать%20вариант%20под%20мою%20машину"
 
 const packages = [
   {
@@ -75,12 +75,12 @@ export function PackagesSection() {
                   {pkg.material}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <ul className="space-y-3 mb-6 flex-1">
+              <CardContent className="flex-1 flex flex-col items-center">
+                <ul className="space-y-3 mb-6 flex-1 w-full max-w-[200px]">
                   {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
+                    <li key={feature} className="flex items-start gap-2">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90">{feature}</span>
+                      <span className="text-foreground/90 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>

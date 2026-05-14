@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Phone } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
-const PHONE_NUMBER = "tel:+77001234567"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
+const PHONE_NUMBER = "tel:+77079829824"
 
 export function FinalCTASection() {
   return (
@@ -43,7 +43,7 @@ export function FinalCTASection() {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            г. Алматы • Работаем ежедневно с 9:00 до 20:00
+            г. Алматы, ул. Тимирязева 42 к15/5, БЦ Азия Мост • Работаем ежедневно с 9:00 до 20:00
           </p>
         </div>
       </div>

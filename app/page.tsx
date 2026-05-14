@@ -1,4 +1,6 @@
-import { Header } from "@/components/landing/header"
+export const dynamic = 'force-dynamic'
+
+import { SiteHeader } from "@/components/landing/site-header"
 import { HeroSection } from "@/components/landing/hero-section"
 import { PackagesSection } from "@/components/landing/packages-section"
 import { CarModelsSection } from "@/components/landing/car-models-section"
@@ -16,7 +18,7 @@ import { StickyWhatsApp } from "@/components/landing/sticky-whatsapp"
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <SiteHeader />
       <main className="pt-16">
         <HeroSection />
         <PackagesSection />
