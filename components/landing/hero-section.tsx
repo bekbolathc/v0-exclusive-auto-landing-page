@@ -14,7 +14,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-interior.jpg"
-          alt="Премиум авточехлы"
+          alt="Пошив авточехлов из экокожи на заказ в Алматы — Exclusive Auto"
           fill
           className="object-cover"
           priority
@@ -25,11 +25,11 @@ export function HeroSection() {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance mb-6">
-            Пошив авточехлов под вашу модель авто в Алматы
+            Авточехлы в Алматы — пошив из экокожи под вашу модель
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            Экокожа, алькантара и комбинированные решения. Идеальная посадка без складок. Изготовление за 1–2 дня
+            Индивидуальный пошив авточехлов из экокожи и алькантары в Алматы. Идеальная посадка без складок. Изготовление за 1–2 дня. Бесплатная установка
           </p>
 
           {/* Benefits */}

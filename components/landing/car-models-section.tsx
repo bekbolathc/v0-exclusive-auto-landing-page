@@ -17,6 +17,7 @@ const carBrands = [
   { name: "Geely", models: "Coolray, Atlas Pro, Monjaro" },
   { name: "Changan", models: "CS55 Plus, CS75 Plus, UNI-K" },
   { name: "Exeed", models: "TXL, VX, LX" },
+  { name: "Chevrolet", models: "Cobalt, Captiva, TrailBlazer" },
   { name: "Jetour", models: "Dashing, X70 Plus, X90 Plus" },
 ]
 
@@ -26,10 +27,10 @@ export function CarModelsSection() {
       <div className="container px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Делаем авточехлы под любую модель авто
+            Авточехлы в Алматы под любую модель авто
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Подбираем лекала под каждую модель — без складок и провисаний
+            Более 2 000 лекал — подбираем под каждую модель, чехлы садятся без складок и провисаний
           </p>
         </div>
 
