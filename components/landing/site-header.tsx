@@ -5,7 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, X } from "lucide-react"
 
-const navLinks = [
+const navLinks: { href: string; label: string; highlight?: boolean }[] = [
+  { href: "/konfigurator", label: "3D Конструктор", highlight: true },
   { href: "#packages", label: "Пакеты" },
   { href: "#gallery", label: "Работы" },
   { href: "#materials", label: "Материалы" },
@@ -29,7 +30,11 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                className={`text-sm transition-colors ${
+                  link.highlight
+                    ? 'text-primary font-semibold hover:text-primary/80'
+                    : 'text-foreground/80 hover:text-primary'
+                }`}
               >
                 {link.label}
               </Link>
