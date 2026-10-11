@@ -1,9 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20под%20мою%20машину"
 
 const carBrands = [
   { name: "Toyota", models: "Camry, Land Cruiser, RAV4" },
@@ -23,45 +20,27 @@ const carBrands = [
 
 export function CarModelsSection() {
   return (
-    <section className="py-20 md:py-28" id="models">
-      <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Авточехлы в Алматы под любую модель авто
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Более 2 000 лекал — подбираем под каждую модель, чехлы садятся без складок и провисаний
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
-          {carBrands.map((brand) => (
-            <div
-              key={brand.name}
-              className="bg-card border border-border/50 rounded-lg p-6 text-center hover:border-primary/50 transition-colors"
-            >
-              <h3 className="text-xl font-bold mb-2">{brand.name}</h3>
-              <p className="text-sm text-muted-foreground">{brand.models}</p>
-            </div>
-          ))}
-        </div>
-
-        <p className="text-center text-muted-foreground mb-8">
-          И многие другие марки и модели
+    <section className="py-14 md:py-20" id="models">
+      <div className="container px-4 max-w-5xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 text-balance">
+          Авточехлы в Алматы под любую модель авто
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          Более 2 000 лекал — чехлы садятся без складок и провисаний
         </p>
 
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-            asChild
-          >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Рассчитать под мою машину
-            </a>
-          </Button>
-        </div>
+        <ul className="flex flex-wrap justify-center gap-2">
+          {carBrands.map((brand) => (
+            <li
+              key={brand.name}
+              title={brand.models}
+              className="rounded-full border border-border/60 px-4 py-2 text-sm font-medium"
+            >
+              {brand.name}
+            </li>
+          ))}
+          <li className="rounded-full px-4 py-2 text-sm text-muted-foreground">и другие</li>
+        </ul>
       </div>
     </section>
   )

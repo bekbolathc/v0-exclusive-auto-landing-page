@@ -94,7 +94,7 @@ export function PackagesSection() {
         </div>
 
         <p className="text-center text-muted-foreground mt-8 mb-8">
-          Не используем дешёвый дерматин — только качественные материалы
+          Цена зависит от модели авто и фиксируется до начала работы. Не используем дешёвый дерматин.
         </p>
 
         <div className="text-center">
@@ -105,7 +105,7 @@ export function PackagesSection() {
           >
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
-              Подобрать вариант под мою машину
+              Рассчитать под мою машину
             </a>
           </Button>
         </div>

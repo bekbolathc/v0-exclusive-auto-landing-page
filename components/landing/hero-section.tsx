@@ -63,7 +63,7 @@ export function HeroSection() {
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Узнать цену в WhatsApp
+                Рассчитать под мою машину
               </a>
             </Button>
             <Button 

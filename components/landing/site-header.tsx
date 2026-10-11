@@ -10,7 +10,6 @@ const navLinks: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/#packages", label: "Пакеты" },
   { href: "/#gallery", label: "Работы" },
   { href: "/#materials", label: "Материалы" },
-  { href: "/#pricing", label: "Цены" },
   { href: "/#faq", label: "Вопросы" },
 ]
 

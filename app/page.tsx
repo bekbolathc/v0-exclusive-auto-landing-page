@@ -7,7 +7,6 @@ import { CarModelsSection } from "@/components/landing/car-models-section"
 import { GallerySection } from "@/components/landing/gallery-section"
 import { MaterialsSection } from "@/components/landing/materials-section"
 import { ProcessSection } from "@/components/landing/process-section"
-import { PricingSection } from "@/components/landing/pricing-section"
 import { ReviewsSection } from "@/components/landing/reviews-section"
 import { WarrantySection } from "@/components/landing/warranty-section"
 import { FAQSection } from "@/components/landing/faq-section"
@@ -27,7 +26,6 @@ export default function HomePage() {
         <GallerySection />
         <MaterialsSection />
         <ProcessSection />
-        <PricingSection />
         <ReviewsSection />
         <WarrantySection />
         <FAQSection />

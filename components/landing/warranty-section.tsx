@@ -1,9 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { MessageCircle, Shield, Check } from "lucide-react"
+import { Shield, Check } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20условия%20гарантии"
 
 const warrantyPoints = [
   "Не трескается",
@@ -27,7 +25,7 @@ export function WarrantySection() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Гарантия 12 месяцев
                 </h2>
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3 ">
                   {warrantyPoints.map((point) => (
                     <li key={point} className="flex items-center gap-3 justify-center md:justify-start">
                       <Check className="w-5 h-5 text-primary flex-shrink-0" />
@@ -35,16 +33,6 @@ export function WarrantySection() {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  size="lg" 
-                  className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-                  asChild
-                >
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Узнать условия
-                  </a>
-                </Button>
               </div>
             </div>
           </div>

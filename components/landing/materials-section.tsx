@@ -1,10 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { MessageCircle, Droplets, Sparkles, Layers } from "lucide-react"
+import { Droplets, Sparkles, Layers } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Помогите%20подобрать%20материал"
 
 const materials = [
   {
@@ -85,19 +83,6 @@ export function MaterialsSection() {
         <p className="text-center text-muted-foreground mb-8">
           Не используем дешёвые материалы, которые трескаются
         </p>
-
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-            asChild
-          >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Подобрать материал
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   )

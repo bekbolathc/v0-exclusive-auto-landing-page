@@ -1,9 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { MessageCircle, Send, Calculator, Scissors, Wrench } from "lucide-react"
+import { Send, Calculator, Scissors, Wrench } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20заказать%20авточехлы"
 
 const steps = [
   {
@@ -62,19 +60,6 @@ export function ProcessSection() {
         <p className="text-center text-foreground/80 mb-8">
           Можно выбрать материалы вживую
         </p>
-
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-            asChild
-          >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Написать сейчас
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   )

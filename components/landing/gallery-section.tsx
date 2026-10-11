@@ -104,7 +104,7 @@ export function GallerySection() {
           >
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
-              Хочу так же
+              Рассчитать под мою машину
             </a>
           </Button>
         </div>

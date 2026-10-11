@@ -1,15 +1,12 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20задать%20вопрос%20об%20авточехлах"
 
 const faqs = [
   {
@@ -69,19 +66,6 @@ export function FAQSection() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-            asChild
-          >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Задать вопрос в WhatsApp
-            </a>
-          </Button>
         </div>
       </div>
     </section>
