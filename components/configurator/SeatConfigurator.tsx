@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, RoundedBox, Environment, ContactShadows, Cylinder } from '@react-three/drei'
+import { OrbitControls, RoundedBox, Environment, Lightformer, ContactShadows } from '@react-three/drei'
 import * as THREE from 'three'
 import { Button } from '@/components/ui/button'
 import { MessageCircle, Share2, Check, RotateCcw } from 'lucide-react'
@@ -547,7 +547,13 @@ function Scene({ config }: { config: SeatConfig }) {
       <pointLight position={[0, 3, 4]} intensity={0.6} color="#ffe8d0" />
 
       {/* Environment for reflections — crucial for eco-leather gloss */}
-      <Environment preset="warehouse" />
+      {/* Procedural studio — no network fetch; softboxes give leather its highlights */}
+      <Environment resolution={256} frames={1}>
+        <Lightformer form="rect" intensity={3}   color="#fff6ea" position={[0, 4, 2]}   scale={[4, 2, 1]} rotation-x={Math.PI / 2} />
+        <Lightformer form="rect" intensity={1.5} color="#ffffff" position={[4, 1, 1]}   scale={[2, 3, 1]} rotation-y={-Math.PI / 2} />
+        <Lightformer form="rect" intensity={1}   color="#dbe6ff" position={[-4, 1, 1]}  scale={[2, 3, 1]} rotation-y={Math.PI / 2} />
+        <Lightformer form="rect" intensity={2}   color="#ffffff" position={[0, 1, -4]}  scale={[4, 1, 1]} />
+      </Environment>
 
       <Suspense fallback={null}>
         <group position={[0, -0.42, 0]}>
