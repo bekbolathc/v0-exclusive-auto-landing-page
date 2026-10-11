@@ -662,6 +662,31 @@ export function SeatConfigurator() {
   const [config, setConfig] = useState<SeatConfig>(DEFAULT_CONFIG)
   const [copied, setCopied] = useState(false)
 
+  // Restore a shared configuration from URL params
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search)
+    const isHex = (v: string | null) => !!v && /^#[0-9a-f]{6}$/i.test(v)
+    setConfig(prev => {
+      const next = { ...prev }
+      const brand = p.get('carBrand')
+      if (brand && CAR_CATALOG[brand]) {
+        next.carBrand = brand
+        const model = p.get('carModel')
+        next.carModel = CAR_CATALOG[brand].models.some(m => m.id === model)
+          ? model!
+          : CAR_CATALOG[brand].models[0].id
+      }
+      const mat = p.get('material') as MaterialType | null
+      if (mat && mat in MAT_BASE) next.material = mat
+      const pat = p.get('pattern') as PatternType | null
+      if (pat && PATTERNS.some(x => x.id === pat)) next.pattern = pat
+      if (isHex(p.get('mainColor')))   next.mainColor   = p.get('mainColor')!
+      if (isHex(p.get('insertColor'))) next.insertColor = p.get('insertColor')!
+      if (isHex(p.get('stitchColor'))) next.stitchColor = p.get('stitchColor')!
+      return next
+    })
+  }, [])
+
   const update = <K extends keyof SeatConfig>(key: K) => (val: SeatConfig[K]) =>
     setConfig(prev => ({ ...prev, [key]: val }))
 

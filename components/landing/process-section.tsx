@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Send, Calculator, Scissors, Wrench } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20заказать%20авточехлы"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20заказать%20авточехлы"
 
 const steps = [
   {

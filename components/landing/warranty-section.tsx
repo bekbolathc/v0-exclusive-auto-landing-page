@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Shield, Check } from "lucide-react"
 
-const WHATSAPP_LINK = "https://wa.me/77001234567?text=Здравствуйте!%20Хочу%20узнать%20условия%20гарантии"
+const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20условия%20гарантии"
 
 const warrantyPoints = [
   "Не трескается",
