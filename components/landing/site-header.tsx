@@ -7,11 +7,11 @@ import { Phone, Menu, X } from "lucide-react"
 
 const navLinks: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/konfigurator", label: "3D Конструктор", highlight: true },
-  { href: "#packages", label: "Пакеты" },
-  { href: "#gallery", label: "Работы" },
-  { href: "#materials", label: "Материалы" },
-  { href: "#pricing", label: "Цены" },
-  { href: "#faq", label: "Вопросы" },
+  { href: "/#packages", label: "Пакеты" },
+  { href: "/#gallery", label: "Работы" },
+  { href: "/#materials", label: "Материалы" },
+  { href: "/#pricing", label: "Цены" },
+  { href: "/#faq", label: "Вопросы" },
 ]
 
 export function SiteHeader() {

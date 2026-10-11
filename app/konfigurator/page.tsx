@@ -17,7 +17,7 @@ export default function ConfiguratorPage() {
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen py-12 md:py-16">
+      <main className="min-h-screen pt-28 pb-12 md:pt-32 md:pb-16">
         <div className="container px-4 max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14">

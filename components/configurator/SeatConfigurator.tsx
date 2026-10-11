@@ -42,13 +42,25 @@ const COLORS = [
 ]
 
 const STITCH_COLORS = [
-  { id: 'black',  hex: '#111111' },
-  { id: 'white',  hex: '#ece8dc' },
-  { id: 'beige',  hex: '#c4a882' },
-  { id: 'red',    hex: '#cc2222' },
-  { id: 'blue',   hex: '#2244aa' },
-  { id: 'orange', hex: '#cc6600' },
+  { id: 'black',  label: 'Чёрная',    hex: '#111111' },
+  { id: 'white',  label: 'Белая',     hex: '#ece8dc' },
+  { id: 'beige',  label: 'Бежевая',   hex: '#c4a882' },
+  { id: 'red',    label: 'Красная',   hex: '#cc2222' },
+  { id: 'blue',   label: 'Синяя',     hex: '#2244aa' },
+  { id: 'orange', label: 'Оранжевая', hex: '#cc6600' },
 ]
+
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setReduced(mq.matches)
+    const onChange = (e: MediaQueryListEvent) => setReduced(e.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+  return reduced
+}
 
 const PATTERNS: { id: PatternType; label: string; desc: string }[] = [
   { id: 'plain',     label: 'Гладкий', desc: 'Без рисунка'    },
@@ -504,6 +516,7 @@ function Seat({ config }: { config: SeatConfig }) {
 // ─────────────────────────────────────────────
 
 function Scene({ config }: { config: SeatConfig }) {
+  const reducedMotion = usePrefersReducedMotion()
   return (
     <>
       {/* Lighting setup for leather-like reflections */}
@@ -556,7 +569,7 @@ function Scene({ config }: { config: SeatConfig }) {
         maxPolarAngle={Math.PI / 2.1}
         minDistance={1.4}
         maxDistance={3.8}
-        autoRotate
+        autoRotate={!reducedMotion}
         autoRotateSpeed={0.9}
         target={[0, 0.1, 0]}
       />
@@ -573,8 +586,11 @@ function ColorSwatch({
 }: { hex: string; label: string; selected: boolean; onSelect: () => void }) {
   return (
     <button
+      type="button"
       onClick={onSelect}
       title={label}
+      aria-label={label}
+      aria-pressed={selected}
       style={{ backgroundColor: hex }}
       className={`w-8 h-8 rounded-full border-2 transition-all duration-150 ${
         selected
@@ -628,7 +644,9 @@ function PatternCard({ pattern, selected, onClick }: {
 }) {
   return (
     <button
+      type="button"
       onClick={onClick}
+      aria-pressed={selected}
       className={`flex flex-col items-center gap-1.5 py-2.5 px-1 rounded-xl border transition-all ${
         selected
           ? 'border-primary bg-primary/10 shadow-sm shadow-primary/20'
@@ -731,13 +749,15 @@ export function SeatConfigurator() {
         {/* Reset button */}
         <button
           onClick={() => setConfig(DEFAULT_CONFIG)}
+          type="button"
           title="Сбросить конфигурацию"
+          aria-label="Сбросить конфигурацию"
           className="absolute top-3 right-3 w-9 h-9 rounded-lg bg-white/8 hover:bg-white/16 border border-white/10 flex items-center justify-center text-white/50 hover:text-white transition-all"
         >
           <RotateCcw className="w-4 h-4" />
         </button>
 
-        <p className="absolute bottom-3 left-0 right-0 text-center text-[11px] text-white/28 pointer-events-none select-none">
+        <p className="absolute bottom-3 left-0 right-0 text-center text-[11px] text-white/60 pointer-events-none select-none">
           Тяните для вращения · Колесо для масштаба
         </p>
       </div>
@@ -781,7 +801,9 @@ export function SeatConfigurator() {
             {(['ekokozha', 'combo', 'alkantara'] as MaterialType[]).map(mat => (
               <button
                 key={mat}
+                type="button"
                 onClick={() => update('material')(mat)}
+                aria-pressed={config.material === mat}
                 className={`py-2 px-2 rounded-lg border text-sm font-medium transition-all ${
                   config.material === mat
                     ? 'border-primary bg-primary text-primary-foreground'
@@ -846,9 +868,12 @@ export function SeatConfigurator() {
             {STITCH_COLORS.map(c => (
               <button
                 key={c.id}
+                type="button"
                 onClick={() => update('stitchColor')(c.hex)}
                 style={{ backgroundColor: c.hex }}
-                title={c.id}
+                title={c.label}
+                aria-label={`Строчка: ${c.label}`}
+                aria-pressed={config.stitchColor === c.hex}
                 className={`w-7 h-7 rounded-full border-2 transition-all ${
                   config.stitchColor === c.hex
                     ? 'border-primary scale-110 ring-2 ring-primary/40'

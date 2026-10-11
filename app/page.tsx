@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic'
 
 import { SiteHeader } from "@/components/landing/site-header"
 import { HeroSection } from "@/components/landing/hero-section"
