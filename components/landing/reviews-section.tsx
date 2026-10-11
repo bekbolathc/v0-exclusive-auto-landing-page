@@ -54,7 +54,7 @@ export function ReviewsSection() {
             Отзывы наших клиентов
           </h2>
           <p className="text-lg text-muted-foreground">
-            Более 300 довольных клиентов в Алматы
+            Более 10 000 установок в Алматы
           </p>
         </div>
 
