@@ -21,7 +21,7 @@ export function FinalCTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Button 
               size="lg" 
-              className="text-lg px-10 py-7 bg-primary hover:bg-primary/90"
+              className="h-auto max-w-full whitespace-normal text-center text-lg px-10 py-7 bg-primary hover:bg-primary/90"
               asChild
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ export function FinalCTASection() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-10 py-7 border-foreground/20 hover:bg-foreground/10"
+              className="h-auto max-w-full whitespace-normal text-center text-lg px-10 py-7 border-foreground/20 hover:bg-foreground/10"
               asChild
             >
               <a href={PHONE_NUMBER}>

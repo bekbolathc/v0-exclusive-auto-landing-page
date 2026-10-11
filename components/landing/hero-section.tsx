@@ -1,11 +1,11 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle, Check } from "lucide-react"
+import { Box, MessageCircle, Check } from "lucide-react"
 
 const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20авточехлы"
-const PHONE_NUMBER = "tel:+77079829824"
 
 export function HeroSection() {
   return (
@@ -58,7 +58,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+              className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
               asChild
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -69,13 +69,13 @@ export function HeroSection() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 border-foreground/20 hover:bg-foreground/10"
+              className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 border-foreground/20 hover:bg-foreground/10"
               asChild
             >
-              <a href={PHONE_NUMBER}>
-                <Phone className="w-5 h-5 mr-2" />
-                Позвонить
-              </a>
+              <Link href="/konfigurator">
+                <Box className="w-5 h-5 mr-2" />
+                Собрать свои чехлы в 3D
+              </Link>
             </Button>
           </div>
           

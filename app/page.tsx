@@ -2,6 +2,7 @@
 import { SiteHeader } from "@/components/landing/site-header"
 import { HeroSection } from "@/components/landing/hero-section"
 import { PackagesSection } from "@/components/landing/packages-section"
+import { ConfiguratorTeaser } from "@/components/landing/configurator-teaser"
 import { CarModelsSection } from "@/components/landing/car-models-section"
 import { GallerySection } from "@/components/landing/gallery-section"
 import { MaterialsSection } from "@/components/landing/materials-section"
@@ -21,6 +22,7 @@ export default function HomePage() {
       <main className="pt-16">
         <HeroSection />
         <PackagesSection />
+        <ConfiguratorTeaser />
         <CarModelsSection />
         <GallerySection />
         <MaterialsSection />

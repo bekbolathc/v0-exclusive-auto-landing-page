@@ -89,7 +89,7 @@ export function MaterialsSection() {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+            className="h-auto max-w-full whitespace-normal text-center text-lg px-8 py-6 bg-primary hover:bg-primary/90"
             asChild
           >
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
