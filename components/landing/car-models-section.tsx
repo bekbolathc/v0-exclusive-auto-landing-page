@@ -22,7 +22,7 @@ export function CarModelsSection() {
   return (
     <section className="py-14 md:py-20" id="models">
       <div className="container px-4 max-w-5xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3 text-balance">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-3 text-balance">
           Авточехлы в Алматы под любую модель авто
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-8">

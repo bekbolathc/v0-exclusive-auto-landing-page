@@ -11,7 +11,7 @@ export function FinalCTASection() {
     <section className="py-20 md:py-28" id="contact">
       <div className="container px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-6 text-balance">
             Рассчитаем стоимость под вашу машину за 5 минут
           </h2>
           <p className="text-xl text-muted-foreground mb-10">

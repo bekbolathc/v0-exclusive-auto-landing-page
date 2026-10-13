@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { BeforeAfter } from "./before-after"
 import { MessageCircle } from "lucide-react"
 
 const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%20Хочу%20такие%20же%20чехлы"
@@ -28,24 +29,22 @@ const galleryItems = [
     image: "/images/stitching-detail.jpg",
     caption: "Детали строчки — ручная работа",
   },
-  {
-    image: "/images/hero-interior.jpg",
-    caption: "Премиум отделка салона",
-  },
 ]
 
 export function GallerySection() {
   return (
     <section className="py-20 md:py-28 bg-secondary/30" id="gallery">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+        <div className="max-w-5xl mx-auto mb-12">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-balance">
             Посмотрите, как меняется салон
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-          {galleryItems.map((item, index) => (
+        <BeforeAfter before={galleryItems[0].before!} after={galleryItems[0].after!} caption={galleryItems[0].caption} />
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
+          {galleryItems.slice(1).map((item, index) => (
             <div key={index} className="group">
               {'before' in item && item.before ? (
                 <div className="relative rounded-lg overflow-hidden border border-border/50">
@@ -84,7 +83,8 @@ export function GallerySection() {
                       src={item.image!}
                       alt={item.caption}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(min-width: 1024px) 16rem, 50vw"
+                      className="object-cover"
                     />
                   </div>
                   <div className="p-3 bg-card">

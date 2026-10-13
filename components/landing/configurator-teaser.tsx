@@ -14,7 +14,7 @@ export function ConfiguratorTeaser() {
       <div className="container px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-10 items-center rounded-2xl border border-border/50 bg-card p-8 md:p-12">
           <div>
-            <h2 id="teaser-title" className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+            <h2 id="teaser-title" className="text-4xl md:text-5xl font-semibold mb-4 text-balance">
               Соберите чехлы под свою машину — до визита
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed max-w-prose">

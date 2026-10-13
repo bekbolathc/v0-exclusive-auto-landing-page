@@ -1,14 +1,12 @@
 "use client"
 
 import Image from "next/image"
-import { Droplets, Sparkles, Layers } from "lucide-react"
 
 
 const materials = [
   {
     name: "Экокожа",
     image: "/images/material-ecoleather.jpg",
-    icon: Droplets,
     features: [
       "Практичная",
       "Легко чистится",
@@ -18,7 +16,6 @@ const materials = [
   {
     name: "Алькантара",
     image: "/images/material-alcantara.jpg",
-    icon: Sparkles,
     features: [
       "Мягкая",
       "Премиальный внешний вид",
@@ -28,7 +25,6 @@ const materials = [
   {
     name: "Комбинированные",
     image: "/images/material-combo.jpg",
-    icon: Layers,
     features: [
       "Алькантара + экокожа",
       "Баланс цены и внешнего вида",
@@ -41,8 +37,8 @@ export function MaterialsSection() {
   return (
     <section className="py-20 md:py-28" id="materials">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+        <div className="max-w-5xl mx-auto mb-12">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-balance">
             Подберём материал под ваш стиль и бюджет
           </h2>
         </div>
@@ -62,12 +58,7 @@ export function MaterialsSection() {
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <material.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold">{material.name}</h3>
-                </div>
+                <h3 className="font-display text-3xl font-semibold mb-4">{material.name}</h3>
                 <ul className="space-y-2">
                   {material.features.map((feature) => (
                     <li key={feature} className="text-foreground/80">

@@ -9,7 +9,7 @@ const WHATSAPP_LINK = "https://wa.me/77079829824?text=Здравствуйте!%
 
 const packages = [
   {
-    name: "СТАНДАРТ",
+    name: "Стандарт",
     material: "Экокожа",
     price: "от 70 000 ₸",
     label: "Оптимально для ежедневной езды",
@@ -21,7 +21,7 @@ const packages = [
     popular: false,
   },
   {
-    name: "КОМФОРТ",
+    name: "Комфорт",
     material: "Экокожа + алькантара",
     price: "от 90 000 ₸",
     label: "Самый популярный выбор",
@@ -33,7 +33,7 @@ const packages = [
     popular: true,
   },
   {
-    name: "ПРЕМИУМ",
+    name: "Премиум",
     material: "Алькантара / премиум материалы",
     price: "от 120 000 ₸",
     label: "Максимальный комфорт",
@@ -51,7 +51,7 @@ export function PackagesSection() {
     <section className="py-20 md:py-28 bg-secondary/30" id="packages">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-balance">
             Выберите вариант под свой бюджет и стиль
           </h2>
         </div>
@@ -70,7 +70,7 @@ export function PackagesSection() {
                 </Badge>
               )}
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-xl font-bold">{pkg.name}</CardTitle>
+                <CardTitle className="font-display text-3xl font-semibold">{pkg.name}</CardTitle>
                 <CardDescription className="text-muted-foreground">
                   {pkg.material}
                 </CardDescription>

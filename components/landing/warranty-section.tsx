@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Check } from "lucide-react"
+import { Check } from "lucide-react"
 
 
 const warrantyPoints = [
@@ -16,13 +16,9 @@ export function WarrantySection() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-card border border-border/50 rounded-2xl p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Shield className="w-12 h-12 text-primary" />
-                </div>
-              </div>
+              
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-4xl md:text-5xl font-semibold mb-4">
                   Гарантия 12 месяцев
                 </h2>
                 <ul className="space-y-3 ">

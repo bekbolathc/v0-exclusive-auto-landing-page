@@ -19,12 +19,12 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/10" />
       </div>
 
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-balance mb-6">
             Авточехлы в Алматы — пошив из экокожи под вашу модель
           </h1>
 

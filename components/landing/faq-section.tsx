@@ -48,7 +48,7 @@ export function FAQSection() {
     <section className="py-20 md:py-28 bg-secondary/30" id="faq">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-balance">
             Часто задаваемые вопросы об авточехлах в Алматы
           </h2>
         </div>
